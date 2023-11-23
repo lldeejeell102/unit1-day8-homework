@@ -1,7 +1,9 @@
 // Combining Datatypes
 // Question 1
-const crayonBox = ['red', 'blue', 'brown', 'purple]']
-console.log(crayonBox[2])
+const crayonBox = {
+    colors:['red', 'blue', 'brown', 'purple]']
+}
+console.log(crayonBox.colors[2])
 
 
 // Question 2
@@ -52,3 +54,35 @@ const apartmentBuilding = {
 }
 
 console.log(apartmentBuilding.floor1.tenant1.name)
+
+
+
+
+
+// Combine objects, arrays, and functions more than one level deep
+// Question 1
+const knit = (item, size) => {
+    return {
+        item: item,
+        size: size
+    }
+}
+
+console.log(knit('scarf', '6ft'))
+
+// Question 2
+const crayonSelector = (color) => {
+    return {
+        crayonBox
+    }
+}
+console.log(crayonSelector())
+
+// Question 3
+const powerButton = () => {
+        const options = () => {
+            console.log('select a song')
+        }
+        options()
+}
+powerButton()
