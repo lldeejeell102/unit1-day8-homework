@@ -86,3 +86,84 @@ const powerButton = () => {
         options()
 }
 powerButton()
+
+
+// Model a Vending Machine
+const vendingMachine = {
+    snacks: ['chips', 'chocolate', 'soda'],
+    vend: (num) => {
+        console.log(vendingMachine.snacks[num])
+    }
+
+}
+vendingMachine.vend(1)
+
+
+// Callbacks
+
+// add
+const add = (num1, num2) => {
+    const sum = num1 + num2;
+    console.log(sum)
+}
+add(4,5)
+
+
+// subtract
+const subtract = (num1, num2) => {
+    const sum = num1 - num2;
+    console.log(sum)
+}
+subtract(4,3)
+
+
+// multiply
+const multiply = (num1, num2) => {
+    const sum = num1 * num2;
+    console.log(sum)
+}
+multiply(4,5)
+
+
+// divide
+const divide = (num1, num2) => {
+    const sum = num1 / num2;
+    console.log(sum)
+}
+divide(4,2)
+
+
+// calculate
+const calculate = (operate, num1, num2) => {
+    return console.log(operate(num1, num2));
+        
+}
+calculate(add, 4, 5)
+calculate(subtract, 4, 3)
+calculate(multiply, 4, 5)
+calculate(divide, 4, 2)
+
+
+// function definition placement
+// const bar = () => {
+//     console.log('bar here');
+// }
+// bar();
+
+// const foo = () => {
+//     console.log('foo here');
+// }
+// foo();
+
+
+// error reading
+
+// foo();
+// const foo ()=>{
+//     console.log('hi');
+// }
+
+// there needs to be an equals sign before the (). Also the initialization of the function foo needs to be after the declaration
+
+
+// Section 3 Array Methods with Callbacks
