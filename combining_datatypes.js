@@ -160,10 +160,131 @@ calculate(divide, 4, 2)
 
 // foo();
 // const foo ()=>{
-//     console.log('hi');
-// }
-
-// there needs to be an equals sign before the (). Also the initialization of the function foo needs to be after the declaration
-
-
+    //     console.log('hi');
+    // }
+    
+    // there needs to be an equals sign before the (). Also the initialization of the function foo needs to be after the declaration
+    
+    
 // Section 3 Array Methods with Callbacks
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+    
+
+// Every
+// 1. Determine if every number is greater than or equal to 0
+nums.forEach((positive) => {
+    if(positive >= 0){
+        console.log(true)
+    }else {
+        console.log(false)
+    }
+})
+
+// 2. Determine if every word shorter than 8 characters
+panagram.forEach((shortTerm) => {
+    if(shortTerm.length <= 8){
+        console.log(true)
+    }else {
+        console.log(false)
+    }
+})
+
+
+// Filter
+// 1. filter the array for numbers less than 4
+const shortNums = []
+nums.forEach((smallNums) => {
+    if(smallNums < 4){
+        shortNums.push(smallNums)
+    }
+})
+console.log(shortNums)
+
+// 2. filter words that have an even length
+const evenWords = []
+panagram.forEach((evenWord) => {
+    if(evenWord.length % 2 === 0){
+        evenWords.push(evenWord)
+    }
+})
+console.log(evenWords)
+
+
+// Find
+// 1. Find the first value divisible by 5
+let dbf = nums.find((v => v % 5 === 0))
+console.log(dbf)
+
+// 2. find the first word that is longer than 5 characters
+let ltf = panagram.find((v => panagram.length > 5))
+console.log(ltf)
+
+
+// Find Index
+// 1. find the index of the first number that is divisible by 3
+let dbt = nums.findIndex((v => v % 3 === 0))
+console.log(dbt)
+
+// 2. find the index of the first word that is less than 2 characters long
+let ltt = panagram.findIndex((v => panagram.length < 2))
+console.log(ltt)
+
+
+// For Each
+// 1. console.log each value of the nums array multiplied by 3
+const numsTripled = []
+nums.forEach((v) => {
+    v = v * 3
+    numsTripled.push(v)
+})
+console.log(numsTripled)
+
+// 2. console.log each word with an exclamation point at the end of it
+const panagramYell = []
+panagram.forEach((v) => {
+    v = v + "!"
+    panagramYell.push(v)
+})
+console.log(panagramYell)
+
+
+// Thought Questions
+// 1. What happened to the original array?
+    // In my function, I created a new array and pushed each modified value/word.
+    // If I were to create a functio that doesn't push the new values into a new array, I would rewrite the values/words
+// 2. Can you store the values from a forEach method in a new array?
+    // Yes! I tend to reach for new arrays to hold modified values in case you need to refer back to the original values.
+
+
+// Map
+// 1. make a new array of each number multiplied by 100
+let nums100 = nums.map(v => {
+    return{
+        nums100: v * 100
+    }
+})
+console.log(nums100)
+// 2. make a new array of all the words in all uppercase
+let panagramUpper = panagram.map(v => {
+    return{
+        panagramUpper: v.toUpperCase()
+    }
+})
+console.log(panagramUpper)
+
+
+// Thought Questions
+// 1. What happened to the original array?
+    // The original array will stay the same since we created a new array.
+// 2. Can you store the values from a map method in a new array?
+    // yes you can store the values from a map method into a new array
+
+
+// Some
+// 1. Find out if some numbers are divisible by 7
+let nums7 = nums.some(v => v % 7 === 0)
+console.log(nums7)
+// 2. Find out if some words have the letter a in them
+let panagramA = panagram.some(v => v.includes('a'))
+console.log(panagramA)
