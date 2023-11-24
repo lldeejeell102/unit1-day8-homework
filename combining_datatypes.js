@@ -173,22 +173,32 @@ const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy'
 
 // Every
 // 1. Determine if every number is greater than or equal to 0
-nums.forEach((positive) => {
-    if(positive >= 0){
-        console.log(true)
-    }else {
-        console.log(false)
-    }
-})
+let numsMoreThanZero = nums.every(v => v >= 0)
+console.log(numsMoreThanZero)
+
+
+// practicing using .forEach instead.
+// nums.forEach((positive) => {
+//     if(positive >= 0){
+//         console.log(true)
+//     }else {
+//         console.log(false)
+//     }
+// })
 
 // 2. Determine if every word shorter than 8 characters
-panagram.forEach((shortTerm) => {
-    if(shortTerm.length <= 8){
-        console.log(true)
-    }else {
-        console.log(false)
-    }
-})
+let panagramShoterThanEight = panagram.every(v => v.length > 8)
+console.log(panagramShoterThanEight)
+
+
+// practicing using .forEach instead.
+// panagram.forEach((shortTerm) => {
+//     if(shortTerm.length <= 8){
+//         console.log(true)
+//     }else {
+//         console.log(false)
+//     }
+// })
 
 
 // Filter
